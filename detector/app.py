@@ -19,7 +19,7 @@ if __name__ == '__main__':
 consumer = KafkaConsumer(
     TRANSACTIONS_TOPIC,
     bootstrap_servers=KAFKA_BROKER_URL,
-    value_deserializer=lambda value: json.loads(value)),
+    value_deserializer=lambda value: json.loads(value),
 )
 
     for message in consumer:
